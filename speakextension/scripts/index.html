@@ -134,6 +134,7 @@
     <select id="select_dialect"></select>
   </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 var langs =
 [['Afrikaans',       ['af-ZA']],
@@ -315,7 +316,7 @@ function processText(final_transcript) {
       case "click":
         console.log("Handling click");
         var stringPieces = arg.split(/\s/);
-        //console.log("String pieces: "+stringPieces);
+
         $("a,input,button").each(function() {
           if($(this)[0].tagName == "BUTTON") {
             console.log("a button has been found");
