@@ -295,12 +295,12 @@ if (!('webkitSpeechRecognition' in window)) {
     interim_span.innerHTML = linebreak(interim_transcript);
     if (final_transcript || interim_transcript) {
       showButtons('inline-block');
+      processText(final_transcript);
     }
-    this.processText();
   };
 }
 
-function processText() {
+function processText(final_transcript) {
   console.log("aroon mathai");
 }
 
