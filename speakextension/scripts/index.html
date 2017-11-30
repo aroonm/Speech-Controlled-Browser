@@ -301,7 +301,19 @@ if (!('webkitSpeechRecognition' in window)) {
 }
 
 function processText(final_transcript) {
-  console.log("aroon mathai" + final_transcript);
+
+  var re = /^(click|scroll|enter)\s(.*)/i;
+  var result = re.exec(final_transcript);
+
+  if(result) {
+    var verb = result[1];
+    var arg = result[2];
+
+    console.log("verb: " + verb + ", args: " + arg)
+  } 
+  else{
+    consol.log("Result is not valid: " + result);
+  }
 }
 
 function upgrade() {
