@@ -306,8 +306,8 @@ function processText(final_transcript) {
   var result = re.exec(final_transcript);
 
   if(result) {
-    var verb = result[1];
-    var arg = result[2];
+    var verb = result[1].toLowerCase();
+    var arg = result[2].toLowerCase();
 
     console.log("verb: " + verb + ", args: " + arg)
 
