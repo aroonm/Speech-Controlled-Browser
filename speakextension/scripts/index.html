@@ -315,7 +315,15 @@ function processText(final_transcript) {
       case "click":
         console.log("Handling click");
         var stringPieces = arg.split(/\s/);
-        console.log("String pieces: "+stringPieces);
+        //console.log("String pieces: "+stringPieces);
+        $("a,input,button").each(function() {
+          if($(this)[0].tagName == "BUTTON") {
+            console.log("a button has been found");
+          } 
+          else if() {
+
+          }
+        })
         break;
       case "enter":
         break;
