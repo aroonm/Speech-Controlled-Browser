@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Scanner",
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "0.0.1",
+  "homepage_url": "http://www.aroonmathai.com/p7/scannerPage.html",
+  "icons": {
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.aroonmathai.com/*"
+      ],
+      "js": [
+          "scripts/jquery.min.js",
+          "scripts/scanner.js",
+          "scripts/domtraversal.js"
+      ],
+      "css": [
+        "css/scanner_css.css",
+        "css/keyboard.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
