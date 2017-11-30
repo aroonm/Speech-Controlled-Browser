@@ -310,6 +310,20 @@ function processText(final_transcript) {
     var arg = result[2];
 
     console.log("verb: " + verb + ", args: " + arg)
+
+    switch(verb) {
+      case "click":
+        console.log("Handling click");
+        var stringPieces = arg.split(/\s/);
+        console.log("String pieces: "+stringPieces);
+        break;
+      case "enter":
+        break;
+      case "scroll":
+        break;
+      default:
+        console.log("Sorry, that is not a recognized command");
+    }
   } 
   else{
     console.log("Result is not valid: " + result);
