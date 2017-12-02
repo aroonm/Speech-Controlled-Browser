@@ -326,14 +326,14 @@ function processText(final_transcript) {
         }
         else if(arg.includes("input,text")) {
           $("input").each(function() {
-            if($(this)[0].tagName == "BUTTON") {
+            if($(this)[0].tagName == "INPUT") {
               console.log("a input has been found");
             }
           })
         }
         else if(arg.includes("link")) {
           $("a").each(function() {
-            if($(this)[0].tagName == "BUTTON") {
+            if($(this)[0].tagName == "A") {
               console.log("a link has been found");
             }
           }) 
