@@ -322,7 +322,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
 function processText(final_transcript) {
 
-  var re = /^(click|scroll|enter)\s(.*)/i;
+  var re = /^(click|scroll|enter|clear)\s(.*)/i;
   var result = re.exec(final_transcript);
 
   if(result) {
@@ -383,12 +383,17 @@ function processText(final_transcript) {
           }
         }
         break;
+
+      case "clear":
+        final_transcript = '';
+        break;
+
       default:
         console.log("Sorry, that is not a recognized command");
     }
   } 
   else{
-    console.log("Result is not valid: " + result);
+    console.log("Sorry, that is not a recognized command: " + result);
   }
 }
 
