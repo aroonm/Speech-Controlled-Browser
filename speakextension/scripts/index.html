@@ -350,10 +350,7 @@ function processText(final_transcript) {
 
             mostRecentTextAreaContext = btn[0];
 
-            if(arg.length > 0) {
-              console.log("Aroon: a arg has been found:"+arg);
-                btn[0]['value'] = arg;
-            }
+
             
 
         }
@@ -361,7 +358,11 @@ function processText(final_transcript) {
 
       case "enter":
       console.log("tf: "+mostRecentTextAreaContext);
-      mostRecentTextAreaValue = arg;
+      //mostRecentTextAreaValue = arg;
+      if(arg.length > 0) {
+              console.log("Aroon: a arg has been found:"+arg);
+                btn[0]['value'] = arg;
+            }
         break;
       case "scroll":
         break;
