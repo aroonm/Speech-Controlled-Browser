@@ -328,8 +328,8 @@ function processText(final_transcript) {
 
         if(arg.includes("button")) {
           var btn = $('div.speachdetect.button').find('button') 
-            console.log("Aroon: a button has been found:"+btn);
-            btn.click();
+            console.log("Aroon: a button has been found:"+$(this));
+            $(this).trigger( "click" );
 
         }
 
