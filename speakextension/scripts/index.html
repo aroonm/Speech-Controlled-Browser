@@ -325,10 +325,6 @@ function processText(final_transcript) {
   var re = /^(click|scroll|enter)\s(.*)/i;
   var result = re.exec(final_transcript);
 
-  if(result.includes('clear')) {
-    final_transcript = '';
-  }
-
   if(result) {
     var verb = result[1].toLowerCase();
     var arg = result[2].toLowerCase();
