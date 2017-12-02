@@ -317,11 +317,27 @@ function processText(final_transcript) {
         console.log("Handling click");
         var stringPieces = arg.split(/\s/);
 
-        $("a,input,button").each(function() {
-          if($(this)[0].tagName == "BUTTON") {
-            console.log("a button has been found");
-          }
-        })
+        if(arg.includes("button")) {
+          $("button").each(function() {
+            if($(this)[0].tagName == "BUTTON") {
+              console.log("a button has been found");
+            }
+          })
+        }
+        else if(arg.includes("input,text")) {
+          $("input").each(function() {
+            if($(this)[0].tagName == "BUTTON") {
+              console.log("a input has been found");
+            }
+          })
+        }
+        else if(arg.includes("link")) {
+          $("a").each(function() {
+            if($(this)[0].tagName == "BUTTON") {
+              console.log("a link has been found");
+            }
+          }) 
+        } 
         break;
       case "enter":
         break;
