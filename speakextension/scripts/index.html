@@ -328,6 +328,7 @@ function processText(final_transcript) {
 
         if(arg.includes("button")) {
           $('button').each(function() {
+            console.log($(this)[0]+" ..... " + $(this));
             if($(this)[0].hasClass('speachdetect')) {
               console.log("Aroon: a button has been found:"+$(this)[0].id);
             }
