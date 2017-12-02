@@ -346,6 +346,7 @@ function processText(final_transcript) {
         if(arg.includes("text") || arg.includes("field") || arg.includes("area")) {
           var btn = $('div.speachdetect').find('input') 
             console.log("Aroon: a field has been found:"+$(btn)[0]);
+            btn[0].focus();
             btn[0].click();
 
             mostRecentTextAreaContext = btn[0];
@@ -358,7 +359,6 @@ function processText(final_transcript) {
 
       case "enter":
       console.log("tf: "+mostRecentTextAreaContext);
-      //mostRecentTextAreaValue = arg;
       if(arg.length > 0) {
               console.log("Aroon: a arg has been found:"+arg);
                 mostRecentTextAreaContext['value'] = arg;
