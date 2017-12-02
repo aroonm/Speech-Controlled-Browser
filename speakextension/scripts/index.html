@@ -137,9 +137,17 @@
 <div class ='speachdetect'>
   <a id="linktoclick" href="http://www.aroonmathai.com" >Aroon's Portfolio</a>
 
+  <br><br>
+
   <button id="buttontoclick" type="button" onclick="handleButtonClick()">Click Me!</button>
 
+  <br><br>
+
   <input id="fieldtoclick" type="text"  name="firstname"><br>
+
+  <br>
+
+  <img src="http://theoutpostbaltimore.com/wp-content/uploads/2017/08/Outpost-Rabbit.jpg" alt="no alt because I'm a jerk">
 
 
 </div>
@@ -357,13 +365,14 @@ function processText(final_transcript) {
         }
         break;
 
-      case "enter":
-      console.log("tf: "+mostRecentTextAreaContext);
-      if(arg.length > 0) {
-              console.log("Aroon: a arg has been found:"+arg);
-                mostRecentTextAreaContext['value'] = arg;
-            }
+        case "enter":
+        console.log("tf: "+mostRecentTextAreaContext);
+        if(arg.length > 0) {
+          console.log("Aroon: a arg has been found:"+arg);
+          mostRecentTextAreaContext['value'] = arg;
+        }
         break;
+
       case "scroll":
         break;
       default:
