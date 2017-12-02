@@ -134,12 +134,12 @@
     <select id="select_dialect"></select>
   </div>
 </div>
-<div>
-  <a id="linktoclick" href="www.aroonmathai.com" class="speachdetect">Aroon's Portfolio</a>
+<div class ='speachdetect'>
+  <a id="linktoclick" href="www.aroonmathai.com" >Aroon's Portfolio</a>
 
-  <button id="buttontoclick" type="button" class="speachdetect">Click Me!</button>
+  <button id="buttontoclick" type="button" >Click Me!</button>
 
-  <input id="fieldtoclick" type="text" class="speachdetect" name="firstname"><br>
+  <input id="fieldtoclick" type="text"  name="firstname"><br>
 
 
 </div>
@@ -327,8 +327,8 @@ function processText(final_transcript) {
         var stringPieces = arg.split(/\s/);
 
         if(arg.includes("button")) {
-          $('button').each(function() {
-            console.log($(this)[0][0]+" ..... " + $(this));
+          $('div/speachdetect.button').each(function() {
+            //console.log($(this)[0][0]+" ..... " + $(this));
             if($(this)[0].hasClass('speachdetect')) {
               console.log("Aroon: a button has been found:"+$(this)[0].id);
             }
