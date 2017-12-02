@@ -320,7 +320,7 @@ function processText(final_transcript) {
         if(arg.includes("button")) {
           $("button").each(function() {
             if($(this)[0].tagName == "BUTTON") {
-              console.log("a button has been found:"+$(this)[0]);
+              console.log("a button has been found:"+$(this)[0].id);
             }
           })
         }
@@ -334,7 +334,7 @@ function processText(final_transcript) {
         else if(arg.includes("link")) {
           $("a").each(function() {
             if($(this)[0].tagName == "A") {
-              console.log("a link has been found: "+$(this)[0].text());
+              console.log("a link has been found: "+$(this)[0].id);
             }
           }) 
         } 
