@@ -322,8 +322,12 @@ if (!('webkitSpeechRecognition' in window)) {
 
 function processText(final_transcript) {
 
-  var re = /^(click|scroll|enter|clear)\s(.*)/i;
+  var re = /^(click|scroll|enter)\s(.*)/i;
   var result = re.exec(final_transcript);
+
+  if(result.includes('clear')) {
+    final_transcript = '';
+  }
 
   if(result) {
     var verb = result[1].toLowerCase();
@@ -382,10 +386,6 @@ function processText(final_transcript) {
 
           }
         }
-        break;
-
-      case "clear":
-        final_transcript = '';
         break;
 
       default:
