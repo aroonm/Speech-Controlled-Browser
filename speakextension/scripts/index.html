@@ -145,6 +145,8 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+var mostRecentTextAreaContext = null;
+var mostRecentTextAreaValue = "";
 var langs =
 [['Afrikaans',       ['af-ZA']],
  ['Bahasa Indonesia',['id-ID']],
@@ -346,12 +348,14 @@ function processText(final_transcript) {
             console.log("Aroon: a field has been found:"+$(btn)[0]);
             btn[0].click();
 
+            mostRecentTextAreaContext = btn[0];
+            mostRecentTextAreaValue = btn[0]['value']
+
         }
-
-
-        
         break;
+
       case "enter":
+      console.log("tf: "+mostRecentTextAreaContext);
         break;
       case "scroll":
         break;
