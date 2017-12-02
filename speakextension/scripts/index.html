@@ -327,10 +327,10 @@ function processText(final_transcript) {
         var stringPieces = arg.split(/\s/);
 
         if(arg.includes("button")) {
-          $('.speachdetect, button').each(function() {
-           // $("button").each(function() {
-              console.log("Aroon: a button has been found:"+$(this)[0].id);
-           // })
+          $('button').each(function() {
+            //$(".speachdetect").each(function() {
+              console.log("Aroon: a button has been found:"+$(this)[0].attr('class'));
+            //})
           })
         }
 
