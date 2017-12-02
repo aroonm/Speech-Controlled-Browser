@@ -320,21 +320,21 @@ function processText(final_transcript) {
         if(arg.includes("button")) {
           $("button").each(function() {
             if($(this)[0].tagName == "BUTTON") {
-              console.log("a button has been found");
+              console.log("a button has been found:"+$(this)[0]);
             }
           })
         }
         else if(arg.includes("input,text")) {
           $("input").each(function() {
             if($(this)[0].tagName == "INPUT") {
-              console.log("a input has been found");
+              console.log("a input has been found: "+$(this)[0]);
             }
           })
         }
         else if(arg.includes("link")) {
           $("a").each(function() {
             if($(this)[0].tagName == "A") {
-              console.log("a link has been found");
+              console.log("a link has been found: "+$(this)[0]);
             }
           }) 
         } 
