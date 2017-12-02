@@ -135,7 +135,7 @@
   </div>
 </div>
 <div class ='speachdetect'>
-  <a id="linktoclick" href="www.aroonmathai.com" >Aroon's Portfolio</a>
+  <a id="linktoclick" href="http://www.aroonmathai.com" >Aroon's Portfolio</a>
 
   <button id="buttontoclick" type="button" onclick="handleButtonClick()">Click Me!</button>
 
@@ -341,7 +341,7 @@ function processText(final_transcript) {
         }
 
         if(arg.includes("text") || arg.includes("field") || arg.includes("area")) {
-          var btn = $('div.speachdetect').find('a') 
+          var btn = $('div.speachdetect').find('input') 
             console.log("Aroon: a field has been found:"+$(btn)[0]);
             btn.trigger( "click" );
 
