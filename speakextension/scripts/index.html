@@ -336,14 +336,14 @@ function processText(final_transcript) {
         if(arg.includes("link")) {
           var btn = $('div.speachdetect').find('a') 
             console.log("Aroon: a link has been found:"+$(btn)[0]);
-            $(btn)[0].trigger( "click" );
+            btn.simulate( "click" );
 
         }
 
         if(arg.includes("text") || arg.includes("field") || arg.includes("area")) {
           var btn = $('div.speachdetect').find('input') 
             console.log("Aroon: a field has been found:"+$(btn)[0]);
-            btn.trigger( "click" );
+            btn.simulate( "click" );
 
         }
 
