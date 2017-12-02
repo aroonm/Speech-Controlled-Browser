@@ -328,21 +328,21 @@ function processText(final_transcript) {
 
         if(arg.includes("button")) {
           $("button").each(function() {
-            if($(this)[0].tagName == "BUTTON") {
+            if($(this)[0].tagName == "BUTTON" && $(this)][0].attr('class')=='speachdetect') {
               console.log("a button has been found:"+$(this)[0].id);
             }
           })
         }
         else if(arg.includes("input,text")) {
           $("input").each(function() {
-            if($(this)[0].tagName == "INPUT") {
+            if($(this)[0].tagName == "INPUT" && $(this)][0].attr('class')=='speachdetect') {
               console.log("a input has been found: "+$(this)[0]);
             }
           })
         }
         else if(arg.includes("link")) {
           $("a").each(function() {
-            if($(this)[0].tagName == "A") {
+            if($(this)[0].tagName == "A" && $(this)][0].attr('class')=='speachdetect') {
               console.log("a link has been found: "+$(this)[0].id);
             }
           }) 
