@@ -349,7 +349,12 @@ function processText(final_transcript) {
             btn[0].click();
 
             mostRecentTextAreaContext = btn[0];
-            mostRecentTextAreaValue = btn[0]['value']
+
+            if(arg.length > 0) {
+              console.log("Aroon: a arg has been found:"+arg);
+                btn[0]['value'] = arg;
+            }
+            
 
         }
         break;
