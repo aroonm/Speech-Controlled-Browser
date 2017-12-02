@@ -346,9 +346,7 @@ function processText(final_transcript) {
         if(arg.includes("link")) {
           var btn = $('div.speachdetect').find('a') 
             console.log("Aroon: a link has been found:"+$(btn)[0]);
-            //btn.simulate( "click" );
             btn[0].click();
-
         }
 
         if(arg.includes("text") || arg.includes("field") || arg.includes("area")) {
@@ -356,12 +354,7 @@ function processText(final_transcript) {
             console.log("Aroon: a field has been found:"+$(btn)[0]);
             btn[0].focus();
             btn[0].click();
-
             mostRecentTextAreaContext = btn[0];
-
-
-            
-
         }
         break;
 
@@ -374,6 +367,21 @@ function processText(final_transcript) {
         break;
 
       case "scroll":
+        if(arg.length > 0) {
+          if(arg.includes("up")) {
+              $('html, body').animate({
+              scrollTop: $(document).scrollTop()-150
+            }, 1000);
+          }
+          else if(arg.includes("down")) {
+            $('html, body').animate({
+              scrollTop: $(document).scrollTop()+150
+            }, 1000);
+          }
+          else {
+
+          }
+        }
         break;
       default:
         console.log("Sorry, that is not a recognized command");
