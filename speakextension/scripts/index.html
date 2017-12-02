@@ -344,7 +344,7 @@ function processText(final_transcript) {
         if(arg.includes("text") || arg.includes("field") || arg.includes("area")) {
           var btn = $('div.speachdetect').find('input') 
             console.log("Aroon: a field has been found:"+$(btn)[0]);
-            btn.simulate( "click" );
+            btn[0].click();
 
         }
 
