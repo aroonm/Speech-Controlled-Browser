@@ -137,7 +137,7 @@
 <div class ='speachdetect'>
   <a id="linktoclick" href="www.aroonmathai.com" >Aroon's Portfolio</a>
 
-  <button id="buttontoclick" type="button" >Click Me!</button>
+  <button id="buttontoclick" type="button" onclick="handleButtonClick()">Click Me!</button>
 
   <input id="fieldtoclick" type="text"  name="firstname"><br>
 
@@ -328,7 +328,8 @@ function processText(final_transcript) {
 
         if(arg.includes("button")) {
           var btn = $('div.speachdetect.button').find('button') 
-            console.log("Aroon: a button has been found:"+btn);
+            console.log("Aroon: a button has been found:"+btn[0]);
+            $(btn[0]).click();
 
         }
 
@@ -362,6 +363,10 @@ function linebreak(s) {
 var first_char = /\S/;
 function capitalize(s) {
   return s.replace(first_char, function(m) { return m.toUpperCase(); });
+}
+
+function handleButtonClick() {
+  alert("Button was clicked");
 }
 
 function createEmail() {
