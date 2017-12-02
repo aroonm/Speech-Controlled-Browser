@@ -336,7 +336,8 @@ function processText(final_transcript) {
         if(arg.includes("link")) {
           var btn = $('div.speachdetect').find('a') 
             console.log("Aroon: a link has been found:"+$(btn)[0]);
-            btn.simulate( "click" );
+            //btn.simulate( "click" );
+            btn.click();
 
         }
 
