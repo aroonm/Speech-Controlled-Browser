@@ -328,9 +328,9 @@ function processText(final_transcript) {
 
         if(arg.includes("button")) {
           $('button').each(function() {
-            //$(".speachdetect").each(function() {
-              console.log("Aroon: a button has been found:"+$(this)[0].attr('class'));
-            //})
+            if($(this)[0].hasClass('speachdetect')) {
+              console.log("Aroon: a button has been found:"+$(this)[0].id);
+            }
           })
         }
 
